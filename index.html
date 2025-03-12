@@ -8,32 +8,39 @@
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            background-color: #f4f4f4;
+            background-color: #000; /* Arka plan siyah */
+            color: white; /* Yazılar beyaz */
             margin: 0;
             padding: 20px;
         }
+        .logo {
+            display: block;
+            margin: 0 auto;
+            width: 150px;
+            height: auto;
+            margin-bottom: 20px;
+        }
         .container {
-            background: white;
+            background: #222; /* İç kutunun rengi koyu gri */
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
             max-width: 400px;
-            margin: 0 auto;
+            margin: -20px auto 0 auto; /* Yukarı kaydırıldı */
         }
-        h1 {
-            font-size: 24px;
-            margin-bottom: 20px;
+        h1, h2 {
+            color: white;
         }
         .btn {
             display: block;
-            width: 50%; /* Buton enini biraz daha küçülttüm */
-            padding: 8px; /* Yüksekliği biraz azalttım */
+            width: 50%;
+            padding: 8px;
             margin: 10px auto;
             background: #007bff;
             color: white;
             text-decoration: none;
             border-radius: 5px;
-            font-size: 14px; /* Yazı boyutunu küçülttüm */
+            font-size: 14px;
             text-align: center;
         }
         .btn:hover {
@@ -41,17 +48,17 @@
         }
         .version {
             font-size: 14px;
-            color: #666;
+            color: #ccc;
             margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
+    <img src="image_transparent-removebg-preview (1).png" alt="MC Games Logo" class="logo">
+
     <div class="container">
-        <h1>MC GAMES</h1>
-        <h2>Uygulamalarım</h2>
-        <p class="version">Sözlümatik v1.4.2</p>
-        <a class="btn" href="https://yourlink.com/sozlumatik-latest.zip" download>Sözlümatik İndir</a>
+        <p class="version">Sözlümatik v1.4.4</p>
+        <a class="btn" href="https://drive.google.com/uc?export=download&id=1GrXyVx3fVbNbf9--2nMYAObwkE5hMTCx" download>Sözlümatik İndir</a>
 
         <p class="version">Flappy Ayna v1.3</p>
         <a class="btn" href="https://drive.google.com/uc?export=download&id=1AU5HolGg24_6WGHkVoVgnAeM5I8Oz0dw" download>Flappy Ayna İndir</a>
