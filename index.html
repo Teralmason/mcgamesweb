@@ -1,74 +1,168 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>McGames İndirmeler</title>
-    <link rel="icon" type="image/png" href="bomb_logo.png">
+    <title>RedPixel Games</title>
+    <link rel="icon" type="image/png" href="RedPixel Logo3.png">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             text-align: center;
-            background-color: #000; /* Arka plan siyah */
-            color: white; /* Yazılar beyaz */
+            background-color: #121212; /* Koyu gri arka plan */
+            color: white;
             margin: 0;
-            padding: 20px;
+            padding: 0;
         }
-        .logo {
-            display: block;
-            margin: 0 auto;
-            width: 150px;
-            height: auto;
-            margin-bottom: 20px;
+
+        header {
+            background-color: #2e2e2e; /* Koyu gri başlık arka planı */
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
         }
+
+        .logo-header {
+            width: 120px; /* Logo boyutu */
+            margin-right: 20px; /* Logo ile başlık arasındaki boşluk */
+        }
+
         .container {
-            background: #222; /* İç kutunun rengi koyu gri */
+            background: #333; /* İç kutu rengi */
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-            max-width: 400px;
-            margin: -20px auto 0 auto; /* Yukarı kaydırıldı */
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+            max-width: 450px;
+            margin: 30px auto;
         }
-        h1, h2 {
-            color: white;
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #f2f2f2;
         }
+
         .btn {
             display: block;
-            width: 50%;
-            padding: 8px;
-            margin: 10px auto;
-            background: #007bff;
+            width: 80%;
+            padding: 10px;
+            margin: 15px auto;
+            background: #e50914; /* Koyu kırmızı tonunda */
             color: white;
             text-decoration: none;
             border-radius: 5px;
-            font-size: 14px;
+            font-size: 16px;
             text-align: center;
+            transition: all 0.3s ease; /* Tüm animasyonlar için geçiş süresi */
         }
+
         .btn:hover {
-            background: #0056b3;
+            background: #c30712; /* Hover rengi biraz daha koyu */
+            transform: scale(1.1); /* Buton hoverda büyür */
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2); /* Gölge efekti ekledim */
         }
-        .version {
+
+        .btn:active {
+            transform: scale(1); /* Butona tıklanırken boyut geri dönsün */
+        }
+
+        /* Tooltip / Popup balon stilini ayarlayalım */
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            font-size: 18px;
+            color: #e50914;
+            margin-left: 10px; /* Başlık ve soru işareti arasına boşluk ekledim */
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 200px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 10px;
+            position: absolute;
+            z-index: 1;
+            top: 50%; /* Tooltip'ün başlıkla aynı hizada olması için */
+            left: 100%; /* Tooltip'in sağa açılmasını sağladım */
+            margin-left: 10px; /* Tooltip'in başlık ve soru işareti arasındaki mesafeyi artırdım */
+            opacity: 0;
+            transition: opacity 0.3s, transform 0.3s ease; /* Opaklık ve hareket animasyonu */
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(-5px); /* Hafifçe yukarıya doğru hareket ettiriyoruz */
+        }
+
+        footer {
+            margin-top: 30px;
             font-size: 14px;
-            color: #ccc;
-            margin-bottom: 10px;
+            color: #888;
+        }
+
+        /* Mobil uyumlu tasarım */
+        @media screen and (max-width: 600px) {
+            .container {
+                padding: 15px;
+                max-width: 90%;
+            }
+
+            .logo {
+                width: 120px;
+            }
+
+            .btn {
+                width: 90%;
+            }
         }
     </style>
 </head>
 <body>
-    <img src="image_transparent-removebg-preview (1).png" alt="MC Games Logo" class="logo">
+
+    <header>
+        <img src="RedPixel_Games.png" alt="RedPixel Games Logo" class="logo-header">
+        <h1>RedPixel Games</h1>
+    </header>
+
+    <!-- Yeni eklenen sade yazıyı buraya ekliyoruz -->
+    <div class="info-text">
+        <p>Uygulamaların açıklamasını görmek için "?" işaretine basabilirsiniz.</p>
+    </div>
 
     <div class="container">
-        <p class="version">Sözlümatik v1.4.5</p>
+        <p class="version">Sözlümatik v1.4.5 (Windows) <span class="tooltip">?
+            <span class="tooltiptext">Sözlümatik, tarih dersi için geliştirilmiş bir sözlü uygulamasıdır. Rastgele öğrenci ve soru seçilerek öğrencinin dönem sonu performans notu belirlenir.</span>
+        </span></p>
         <a class="btn" href="https://drive.google.com/uc?export=download&id=1DXEcZKU79Tgq-G3z33G6nIfy45tZJR4R" download>Sözlümatik İndir</a>
 
-        <p class="version">Flappy Ayna v1.3</p>
+        <p class="version">Flappy Ayna v1.3 (Android) <span class="tooltip">?
+            <span class="tooltiptext">Flappy Ayna, klasik Flappy Bird oyununun çakmasıdır. Ancak yapılış hikayesi derindir.</span>
+        </span></p>
         <a class="btn" href="https://drive.google.com/uc?export=download&id=1AU5HolGg24_6WGHkVoVgnAeM5I8Oz0dw" download>Flappy Ayna İndir</a>
-        
-        <p class="version">kTranslate v1.0</p>
+
+        <p class="version">kTranslate v1.0 (Android) <span class="tooltip">?
+            <span class="tooltiptext">kTranslate, metinleri hızlıca çeviren basit ama etkili bir uygulamadır.</span>
+        </span></p>
         <a class="btn" href="https://drive.google.com/uc?export=download&id=1AWFhG9e45dkWu4LqhYMrsm44oun-LBRl" download>Translate İndir</a>
-        
-        <p class="version">Epic Free Radar v1.0</p>
+
+        <p class="version">Epic Free Radar v1.0 (Android)<span class="tooltip">?
+            <span class="tooltiptext">Epic Free Radar, Epic Games'in haftalık ücretsiz oyunlarını hızlıca gösteren bir uygulamadır.</span>
+        </span></p>
         <a class="btn" href="https://drive.google.com/uc?export=download&id=1AX2EQW7K5wlqPrGb6XlSD1OudxDWKp-g" download>Epic Free Radar İndir</a>
     </div>
+
+    <footer>
+        <p>© 2025 RedPixel Games. Tüm hakları saklıdır.</p>
+    </footer>
+
 </body>
 </html>
+
+
+
